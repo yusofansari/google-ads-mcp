@@ -1,0 +1,15 @@
+[Unit]
+Description=MCP Google Ads Public Server
+After=network.target
+
+[Service]
+Type=simple
+User=yusof
+WorkingDirectory=/home/yusof/mcp/MCP-Public
+EnvironmentFile=/home/yusof/mcp/MCP-Public/.env
+ExecStart=/home/yusof/mcp/MCP-Public/.venv/bin/python google_ads/run.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
