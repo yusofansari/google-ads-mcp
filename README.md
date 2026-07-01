@@ -1,5 +1,7 @@
 # Google Ads MCP Server
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) &nbsp; **100% free & open-source**
+
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that connects **Google Ads** to any MCP-compatible AI client — [Claude](https://claude.ai), [Cursor](https://cursor.com), [Windsurf](https://windsurf.com), [Cline](https://cline.bot), [VS Code](https://code.visualstudio.com), ChatGPT, and more. **57 tools** for campaign management, keyword optimization, bidding, and competitive analysis through natural language.
 
 Ask *"which search terms are wasting budget?"* or *"compare campaign performance month over month"* and get answers — and actions — straight from your Google Ads account.
