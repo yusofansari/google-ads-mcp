@@ -1,12 +1,13 @@
 # Google Ads MCP Server
 
-A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that connects **Google Ads** to [Claude](https://claude.ai) and any MCP-compatible AI client — **57 tools** for campaign management, keyword optimization, bidding, and competitive analysis through natural language.
+A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that connects **Google Ads** to any MCP-compatible AI client — [Claude](https://claude.ai), [Cursor](https://cursor.com), [Windsurf](https://windsurf.com), [Cline](https://cline.bot), [VS Code](https://code.visualstudio.com), ChatGPT, and more. **57 tools** for campaign management, keyword optimization, bidding, and competitive analysis through natural language.
 
 Ask *"which search terms are wasting budget?"* or *"compare campaign performance month over month"* and get answers — and actions — straight from your Google Ads account.
 
 ## Features
 
 - **57 tools** over the `adwords` scope
+- Works with **any MCP client** (Claude, Cursor, Windsurf, Cline, VS Code, ChatGPT, …)
 - Campaign, ad group, and ad performance reporting
 - Keyword optimization, quality scores, and match-type analysis
 - Bid strategies and budget utilization
@@ -17,17 +18,23 @@ Ask *"which search terms are wasting budget?"* or *"compare campaign performance
 
 ## Quick Start
 
-### Use as a Claude Connector (no install)
+### Option A — Hosted connector (no install)
 
-1. Open [claude.ai/settings/connectors](https://claude.ai/settings/connectors)
-2. Click **Add custom connector**
-3. Enter: `https://saveyourclicks.com/mcp/gads`
-4. Claude handles Google sign-in automatically via OAuth 2.0.
+Add this remote MCP URL as a custom connector in any client that supports remote MCP + OAuth:
 
-### Self-host
+```
+https://saveyourclicks.com/mcp/gads
+```
+
+- **Claude** — [claude.ai/settings/connectors](https://claude.ai/settings/connectors) → *Add custom connector*
+- **Cursor / Windsurf / Cline / VS Code** — add it as an MCP server URL in your client's MCP settings
+
+The server handles Google sign-in automatically via OAuth 2.0.
+
+### Option B — Self-host
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/google-ads-mcp.git
+git clone https://github.com/yusofansari/google-ads-mcp.git
 cd google-ads-mcp
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
@@ -61,4 +68,4 @@ The server uses [FastMCP](https://github.com/modelcontextprotocol) with a custom
 
 ---
 
-*Keywords: Google Ads MCP, Google Ads API, Claude MCP, Model Context Protocol, PPC automation, GAQL, AI Google Ads management.*
+*Keywords: Google Ads MCP, Google Ads API, Claude MCP, Cursor MCP, Model Context Protocol, PPC automation, GAQL, AI Google Ads management.*
